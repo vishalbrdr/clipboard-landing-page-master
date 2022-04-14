@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+
+// ### Primary
+$Strong-Cyan: hsl(171, 66%, 44%);
+$Light-Blue: hsl(233, 100%, 69%);
+
+// ### Neutral
+$Dark-Grayish-Blue: hsl(210, 10%, 33%);
+$Grayish-Blue: hsl(201, 11%, 66%);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.8rem;
+}
+.header {
+  min-height: 100vh;
+  background-image: url(./images/bg-header-desktop.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+  padding: 3rem;
+  @media screen and (max-width: 500px) {
+    background-image: url(./images/bg-header-mobile.png);
+    max-height: max-content;
+  }
+  figure {
+    margin-bottom: 5rem;
+  }
+}
+.heading-1 {
+  color: $Dark-Grayish-Blue;
+  font-size: 5rem;
+  @media screen and (max-width: 500px) {
+    font-size: 4rem;
+  }
+}
+.heading-2 {
+  color: $Dark-Grayish-Blue;
+  font-size: 4rem;
+  text-align: center;
+  @media screen and (max-width: 500px) {
+    font-size: 3.5rem;
+  }
+}
+.heading-3 {
+  color: $Dark-Grayish-Blue;
+  font-size: 3rem;
+  @media screen and (max-width: 500px) {
+    font-size: 2.5rem;
+  }
+}
+.subheading {
+  color: $Grayish-Blue;
+  font-size: 2rem;
+  max-width: 75rem;
+  margin-top: 2.5rem;
+  line-height: 3rem;
+  text-align: center;
+}
+.btn-container {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  @media screen and (max-width: 500px) {
+    height: max-content;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+}
+.btn {
+  margin: auto;
+  padding: 1.5rem 2.8rem;
+  font-size: 2rem;
+  border-radius: 5rem;
+  border: none;
+  background: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 100ms ease;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
+  &-green {
+    background-color: $Strong-Cyan;
+    box-shadow: inset 0 -0.3rem 0 0 rgba(0, 0, 0, 0.1),
+      0 0 1rem 1rem rgba($color: $Strong-Cyan, $alpha: 0.1);
+    &:hover {
+      background-color: rgba($color: $Strong-Cyan, $alpha: 0.7);
+    }
+  }
+  &-blue {
+    background-color: $Light-Blue;
+    box-shadow: inset 0 -0.3rem 0 0 rgba(0, 0, 0, 0.1),
+      0 0 1rem 1rem rgba($color: $Light-Blue, $alpha: 0.1);
+    &:hover {
+      background-color: rgba($color: $Light-Blue, $alpha: 0.7);
+    }
+  }
+}
+ul {
+  li {
+    list-style: none;
+  }
+}
+.text {
+  color: $Grayish-Blue;
+  font-size: 1.8rem;
+}
+.section {
+  padding: 3rem;
+  &__snippets {
+    .heading-2,
+    .subheading {
+      justify-self: center;
+    }
+    display: grid;
+    grid-gap: 2rem;
+    &-main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7vw;
+      margin-top: 10rem;
+      @media screen and (max-width: 500px) {
+        text-align: center;
+      }
+      .features {
+        display: grid;
+        max-width: 40rem;
+        gap: 5rem;
+        align-self: flex-end;
+        margin-bottom: 8rem;
+        li {
+          display: grid;
+          grid-gap: 2rem;
+        }
+      }
+    }
+    figure {
+      margin-left: -10rem;
+      width: 50vw;
+      @media screen and (max-width: 500px) {
+        margin: auto;
+        width: 100%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__access {
+    margin-top: 10rem;
+    display: grid;
+    justify-items: center;
+
+    figure {
+      margin-top: 7rem;
+      width: 60vw;
+      @media screen and (max-width: 500px) {
+        margin: auto;
+        width: 100%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__workflow {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .tools {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 5rem;
+      gap: 5rem;
+      @media screen and (max-width: 700px) {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+      }
+    }
+    .tool {
+      display: grid;
+      figure {
+        margin: auto;
+        width: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 100%;
+        }
+      }
+      .heading-3 {
+        margin-top: 2rem;
+      }
+      .text {
+        max-width: 35rem;
+        margin-top: 2rem;
+        line-height: 3rem;
+      }
+    }
+    .companies {
+      width: 100%;
+      display: flex;
+      margin-top: 15rem;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 5rem;
+      @media screen and (max-width: 500px) {
+        flex-direction: column;
+      }
+    }
+  }
+  &__download {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+  }
+}
+
+.footer {
+  background-color: rgba($color: $Grayish-Blue, $alpha: 0.1);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, minmax(1fr, max-content));
+  align-items: center;
+  padding-top: 5rem;
+  padding-inline: 15rem;
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+  }
+  a {
+    color: $Dark-Grayish-Blue;
+    text-decoration: none;
+    font-weight: bold;
+    &:hover {
+      color: $Strong-Cyan;
+    }
+  }
+  .logo {
+    width: 8rem;
+    img {
+      width: 100%;
+    }
+  }
+  &__links {
+    display: flex;
+    gap: 5rem;
+    .col {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      @media screen and (max-width: 800px) {
+        gap: 0;
+      }
+    }
+    li {
+      margin-top: 3rem;
+    }
+    @media screen and (max-width: 800px) {
+      display: flex;
+      gap: 0;
+      flex-direction: column;
+    }
+  }
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    justify-self: end;
+    a svg {
+      color: $Dark-Grayish-Blue;
+    }
+    a:hover svg {
+      color: $Strong-Cyan;
+    }
+  }
+  .attribution {
+    margin-top: 5rem;
+    grid-column-start: 2;
+  }
+}
